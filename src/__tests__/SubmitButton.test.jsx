@@ -10,7 +10,7 @@ test('displays a button with the text "Submit Password"', () => {
   expect(screen.queryByText(/Submit Password/)).toBeInTheDocument();
 });
 
-test("hovering the button triggers console output", () => {
+test("hovering over the button triggers console output", () => {
   console.log = vi.fn();
 
   const button = screen.queryByText(/Submit Password/);
@@ -20,7 +20,7 @@ test("hovering the button triggers console output", () => {
   expect(console.log.mock.calls[0][0]).toBe("Mouse Entering");
 });
 
-test("removing focus (blur) on the button triggers console output", () => {
+test("removing mouse from the button triggers console output", () => {
   console.log = vi.fn();
 
   const button = screen.queryByText(/Submit Password/);
