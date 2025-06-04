@@ -1,8 +1,19 @@
 // Code PasswordInput Component Here
+function handleChange() {
+    console.log("Entering password...");
+};
 
-function PasswordInput (){
+function PasswordInput() {
     return(
-        <></>
+        <>
+            <label htmlFor={"password"}>Password: </label>
+            <input 
+                type={"password"} 
+                id={"password"} 
+                name={"password"} 
+                onChange={()=>handleChange()}
+            />
+        </>
     )
 }
 
